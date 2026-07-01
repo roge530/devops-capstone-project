@@ -9,8 +9,8 @@ on:
 
 jobs:
   build:
-    runs-on: "ubuntu-lastest"
-    container: "python:3.9-slim"
+    runs-on: ubuntu-latest
+    container: python:3.9-slim
     
     services:
       postgres:
@@ -43,4 +43,4 @@ jobs:
       - name: Run unit tests with Nose
         run: nosetests
         env:
-          DATABASE_URI: "postgresql://postgres:pgs3cr3t@postgres:5432/testdbs"
+          DATABASE_URI: "postgresql://postgres:pgs3cr3t@postgres:5432/testdb"
